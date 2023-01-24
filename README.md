@@ -12,7 +12,7 @@ Match balanced string pairs, like `{` and `}` or `<b>` and `</b>`. Supports regu
 Get the first matching pair of braces:
 
 ```js
-var balanced = require('balanced-match')
+import balanced from "https://code4fukui.github.io/balanced-match/index.js";
 
 console.log(balanced('{', '}', 'pre{in{nested}}post'))
 console.log(balanced('{', '}', 'pre{first}between{second}post'))
@@ -22,14 +22,10 @@ console.log(balanced(/\s+\{\s+/, /\s+\}\s+/, 'pre  {   in{nest}   }  post'))
 The matches are:
 
 ```bash
-$ node example.js
-{ start: 3, end: 14, pre: 'pre', body: 'in{nested}', post: 'post' }
-{ start: 3,
-  end: 9,
-  pre: 'pre',
-  body: 'first',
-  post: 'between{second}post' }
-{ start: 3, end: 17, pre: 'pre', body: 'in{nest}', post: 'post' }
+$ deno run example.js
+{ start: 3, end: 14, pre: "pre", body: "in{nested}", post: "post" }
+{ start: 3, end: 9, pre: "pre", body: "first", post: "between{second}post" }
+{ start: 3, end: 17, pre: "pre", body: "in{nest}", post: "post" }
 ```
 
 ## API

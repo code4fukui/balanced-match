@@ -1,5 +1,3 @@
-'use strict'
-
 /**
  * @param {string | RegExp} a
  * @param {string | RegExp} b
@@ -78,4 +76,4 @@ function range (a, b, str) {
   return result
 }
 
-module.exports = balanced
+export default balanced
